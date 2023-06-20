@@ -1,79 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.11.1 on win32)" generated="20230620 12:35:30.605" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1 (Python 3.11.1 on win32)" generated="20230620 15:06:28.138" rpa="false" schemaversion="4">
 <suite id="s1" name="TC 003 TextBoxValidation" source="C:\Users\akshobya\PycharmProjects\robotProject\RobotFramework\TC_003_TextBoxValidation.robot">
 <test id="s1-t1" name="CheckTextBox" line="9">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230620 12:35:30.775" level="INFO">Opening browser 'Chrome' to base url 'https://demo.nopcommerce.com'.</msg>
-<status status="PASS" starttime="20230620 12:35:30.775" endtime="20230620 12:35:32.736"/>
+<msg timestamp="20230620 15:06:28.248" level="INFO">Opening browser 'Chrome' to base url 'https://demo.nopcommerce.com'.</msg>
+<status status="PASS" starttime="20230620 15:06:28.248" endtime="20230620 15:06:30.173"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230620 12:35:32.736" endtime="20230620 12:35:32.860"/>
+<status status="PASS" starttime="20230620 15:06:30.173" endtime="20230620 15:06:30.286"/>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>nopCommerce demo store</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20230620 12:35:32.868" level="INFO">Page title is 'nopCommerce demo store'.</msg>
-<status status="PASS" starttime="20230620 12:35:32.860" endtime="20230620 12:35:32.868"/>
+<msg timestamp="20230620 15:06:30.302" level="INFO">Page title is 'nopCommerce demo store'.</msg>
+<status status="PASS" starttime="20230620 15:06:30.286" endtime="20230620 15:06:30.302"/>
 </kw>
 <kw name="Click Link" library="SeleniumLibrary">
 <arg>xpath://a[@class='ico-login']</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20230620 12:35:32.876" level="INFO">Clicking link 'xpath://a[@class='ico-login']'.</msg>
-<status status="PASS" starttime="20230620 12:35:32.875" endtime="20230620 12:35:33.427"/>
+<msg timestamp="20230620 15:06:30.302" level="INFO">Clicking link 'xpath://a[@class='ico-login']'.</msg>
+<status status="PASS" starttime="20230620 15:06:30.302" endtime="20230620 15:06:31.053"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${"text_Check"}</var>
 <arg>id:Email</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20230620 12:35:33.427" level="INFO">${"text_Check"} = id:Email</msg>
-<status status="PASS" starttime="20230620 12:35:33.427" endtime="20230620 12:35:33.427"/>
+<msg timestamp="20230620 15:06:31.053" level="INFO">${"text_Check"} = id:Email</msg>
+<status status="PASS" starttime="20230620 15:06:31.053" endtime="20230620 15:06:31.053"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${"text_Check"}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230620 15:06:31.053" endtime="20230620 15:06:31.053"/>
 </kw>
 <kw name="Element Should Be Enabled" library="SeleniumLibrary">
 <arg>${"text_Check"}</arg>
 <doc>Verifies that element identified by ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20230620 12:35:33.427" endtime="20230620 12:35:33.466"/>
+<status status="PASS" starttime="20230620 15:06:31.053" endtime="20230620 15:06:31.093"/>
 </kw>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${"text_Check"}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230620 12:35:33.486" level="INFO">Element 'id:Email' is displayed.</msg>
-<status status="PASS" starttime="20230620 12:35:33.466" endtime="20230620 12:35:33.486"/>
+<msg timestamp="20230620 15:06:31.117" level="INFO">Element 'id:Email' is displayed.</msg>
+<status status="PASS" starttime="20230620 15:06:31.093" endtime="20230620 15:06:31.117"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${"text_Check"}</arg>
 <arg>123123</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230620 12:35:33.486" level="INFO">Typing text '123123' into text field 'id:Email'.</msg>
-<status status="PASS" starttime="20230620 12:35:33.486" endtime="20230620 12:35:33.575"/>
+<msg timestamp="20230620 15:06:31.117" level="INFO">Typing text '123123' into text field 'id:Email'.</msg>
+<status status="PASS" starttime="20230620 15:06:31.117" endtime="20230620 15:06:31.189"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${"text_Check"}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230620 15:06:31.189" endtime="20230620 15:06:31.189"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230620 12:35:38.576" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20230620 12:35:33.575" endtime="20230620 12:35:38.576"/>
+<msg timestamp="20230620 15:06:36.189" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230620 15:06:31.189" endtime="20230620 15:06:36.189"/>
 </kw>
 <kw name="Clear Element Text" library="SeleniumLibrary">
 <arg>${"text_Check"}</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" starttime="20230620 12:35:38.576" endtime="20230620 12:35:38.655"/>
+<status status="PASS" starttime="20230620 15:06:36.190" endtime="20230620 15:06:36.229"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230620 12:35:43.656" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20230620 12:35:38.655" endtime="20230620 12:35:43.656"/>
+<msg timestamp="20230620 15:06:41.229" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230620 15:06:36.229" endtime="20230620 15:06:41.229"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230620 12:35:43.658" endtime="20230620 12:35:45.874"/>
+<status status="PASS" starttime="20230620 15:06:41.229" endtime="20230620 15:06:43.430"/>
 </kw>
-<status status="PASS" starttime="20230620 12:35:30.775" endtime="20230620 12:35:45.876"/>
+<status status="PASS" starttime="20230620 15:06:28.248" endtime="20230620 15:06:43.430"/>
 </test>
-<status status="PASS" starttime="20230620 12:35:30.605" endtime="20230620 12:35:45.876"/>
+<status status="PASS" starttime="20230620 15:06:28.138" endtime="20230620 15:06:43.430"/>
 </suite>
 <statistics>
 <total>

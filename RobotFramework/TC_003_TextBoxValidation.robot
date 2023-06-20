@@ -13,7 +13,7 @@ CheckTextBox
     click link  xpath://a[@class='ico-login']
     #Storing value
     ${"text_Check"}   set variable  id:Email
-
+    Log To Console  ${"text_Check"}
     #Check Visibity status & Enabled status(Text Element
     element should be enabled   ${"text_Check"}
     element should be visible   ${"text_Check"}
