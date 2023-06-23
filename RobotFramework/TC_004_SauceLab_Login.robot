@@ -11,11 +11,11 @@ CheckTextBox
     Maximize Browser Window
     title should be     Swag Labs
     input text  xpath://input[@id='user-name']  standard_user
-     sleep  3
+     sleep  2
     input text  xpath://input[@id='password']  secret_sauce
-     sleep  3
+     sleep  2
     click element   xpath://input[@name ='login-button']
-    sleep  5
+    sleep  2
     title should be     Swag Labs
 
     click element   xpath://button[@id='add-to-cart-sauce-labs-backpack']
@@ -29,7 +29,7 @@ CheckTextBox
      click element   xpath://button[@id='checkout']
      sleep  3
 
-     input text  id:first-name    Abc
+     input text  id:first-name    ABB
      input text  id:last-name     ef
      input text  id:postal-code     56001
      sleep  3
